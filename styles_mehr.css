@@ -6,15 +6,15 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Zentriert Inhalte horizontal */
-    justify-content: center; /* Zentriert Inhalte vertikal */
-    min-height: 100vh; /* Füllt den gesamten Bildschirm */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
 }
 
 /* Bildstil */
 .slide img {
-    max-width: 300px; /* Begrenze die maximale Breite auf Desktop */
-    height: auto; /* Behalte Seitenverhältnis */
+    max-width: 500px; /* Maximale Breite für große Geräte */
+    height: auto; /* Behalte das Seitenverhältnis */
     margin: 0 auto;
     display: block;
     border-radius: 10px;
@@ -25,7 +25,7 @@
     margin-top: 10px;
     font-size: 16px;
     color: #333;
-    text-align: center; /* Zentriert den Text */
+    text-align: center; /* Zentriere den Text */
 }
 
 /* Für Tablets und kleinere Bildschirme */
@@ -54,9 +54,9 @@
     .slide p {
         font-size: 14px; /* Kleinere Schriftgröße für Text */
     }
+}
 
-    /* Entferne die Pfeile */
-    .prev, .next {
-        display: none; /* Verstecke die Navigationspfeile */
-    }
+/* Entferne die Pfeile */
+.prev, .next {
+    display: none; /* Verstecke die Navigationspfeile */
 }
