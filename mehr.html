@@ -3,32 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Icons</title>
-   
+    <title>Slideshow - Isabelle Edel Museum</title>
+    <!-- Gemeinsame Stile für Header und Global -->
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="styles_mehr.css">
-    
+    <!-- Spezifische Stile für die Slideshow -->
+    <link rel="stylesheet" href="slideshow.css">
 </head>
 <body>
+    <!-- Header (identisch mit Mainpage) -->
+    <header>
+        <h1>ISABELLE EDEL MUSEUM</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="gallery.html">Gallery</a>
+        </nav>
+    </header>
 
-    
+    <!-- Slideshow -->
     <div class="slideshow-container">
+        <!-- Bild 1 -->
         <div class="slide active">
-            <img src="images/qrcode.jpg" alt="QR-Code Icon 1">
-            <p>Scannen Sie QR-Codes, um weitere Informationen zu erhalten.</p>
+            <img src="images/artwork1.jpg" alt="Kunstwerk 1">
+            <p>Beschreibung des ersten Kunstwerks.</p>
         </div>
+
+        <!-- Bild 2 -->
         <div class="slide">
-            <img src="images/info.jpg" alt="Info">
-            <p>Hier erhalten Sie wichtige Infos rund um das Museum.</p>
+            <img src="images/artwork2.jpg" alt="Kunstwerk 2">
+            <p>Beschreibung des zweiten Kunstwerks.</p>
         </div>
+
+        <!-- Bild 3 -->
         <div class="slide">
-            <img src="images/cafe.jpg" alt="Cafe IEM">
-            <p>Isabella Edel Museumscafe</p>
+            <img src="images/artwork3.jpg" alt="Kunstwerk 3">
+            <p>Beschreibung des dritten Kunstwerks.</p>
         </div>
+
+        <!-- Navigation -->
         <button class="prev" onclick="changeSlide(-1)">❮</button>
         <button class="next" onclick="changeSlide(1)">❯</button>
     </div>
 
+    <!-- JavaScript für die Slideshow -->
     <script>
         let currentSlide = 0;
         const slides = document.querySelectorAll('.slide');
@@ -39,8 +56,8 @@
             slides[currentSlide].classList.add('active');
         }
 
-        // Automatische Slideshow
-        setInterval(() => changeSlide(1), 5000); // Alle 5 Sekunden zur nächsten Folie wechseln
+        // Automatische Slideshow (optional)
+        setInterval(() => changeSlide(1), 5000);
     </script>
 </body>
 </html>
