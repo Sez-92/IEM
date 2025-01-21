@@ -11,7 +11,7 @@ body {
 }
 
 header + .slideshow-container {
-    margin-top: 200px; /* Abstand nach dem Header */
+    margin-bottom: 200px; /* Abstand nach dem Header */
 }
 
 header {
