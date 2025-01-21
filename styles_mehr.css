@@ -8,8 +8,8 @@
 
 /* Bildstil */
 .slide img {
-    max-width: 100%; /* Bild passt sich an die Container-Breite an */
-    height: auto; /* Beibehaltung des Seitenverhältnisses */
+    max-width: 500px; /* Begrenze die maximale Breite auf Desktop */
+    height: auto; /* Seitenverhältnis bleibt erhalten */
     margin: 0 auto;
     display: block;
     border-radius: 10px;
@@ -52,10 +52,10 @@
 }
 /* Für Tablets und kleinere Bildschirme */
 @media (max-width: 768px) {
-    .slideshow-container {
-        max-width: 100%; /* Container nimmt die volle Breite ein */
-        margin: 20px auto; /* Weniger Abstand */
+    .slide img {
+        max-width: 300px; /* Reduziere die Breite für Tablets */
     }
+}
 
     .slide img {
         max-width: 90%; /* Bildgröße auf 90% der Breite reduzieren */
@@ -70,8 +70,9 @@
 
 /* Für Smartphones */
 @media (max-width: 480px) {
-    .slideshow-container {
-        max-width: 100%; /* Container nimmt die volle Breite ein */
+    .slide img {
+        max-width: 90%; /* Bilder nehmen 90% der Bildschirmbreite ein */
+        height: auto; /* Behalte das Seitenverhältnis bei */
     }
 
     .slide img {
