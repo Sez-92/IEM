@@ -18,8 +18,21 @@
             text-align: center;
         }
 
+        .slideshow-container {
+            position: relative;
+            max-width: 90%;
+        }
+
+        .slide {
+            display: none;
+        }
+
+        .active {
+            display: block;
+        }
+
         img {
-            max-width: 200px; /* Passe die Größe des Bildes an */
+            max-width: 200px;
             height: auto;
             margin-bottom: 20px;
         }
@@ -28,10 +41,61 @@
             font-size: 18px;
             color: #333;
         }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 10px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            border: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            user-select: none;
+        }
+
+        .prev {
+            left: -40px;
+        }
+
+        .next {
+            right: -40px;
+        }
     </style>
 </head>
 <body>
-    <img src="images/qrcode_icon.png" alt="QR-Code Icon">
-    <p>Hier können QR-Codes gescannt werden, um weitere Informationen zu erhalten.</p>
+    <div class="slideshow-container">
+        <div class="slide active">
+            <img src="images/qrcode_icon1.png" alt="QR-Code Icon 1">
+            <p>Scannen Sie QR-Codes, um weitere Informationen zu erhalten.</p>
+        </div>
+        <div class="slide">
+            <img src="images/info.png" alt="Info_Sign">
+            <p>Hier erhalten sie wichtige Infos rund um das Museum.</p>
+        </div>
+        <div class="slide">
+            <img src="images/cafe.png" alt="Cafe_IEM">
+            <p>Isabella Edel Museumscafe</p>
+        </div>
+        <button class="prev" onclick="changeSlide(-1)">❮</button>
+        <button class="next" onclick="changeSlide(1)">❯</button>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function changeSlide(direction) {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + direction + slides.length) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+
+        // Automatische Slideshow
+        setInterval(() => changeSlide(1), 5000); // Alle 5 Sekunden zur nächsten Folie wechseln
+    </script>
 </body>
 </html>
