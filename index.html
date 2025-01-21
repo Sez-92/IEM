@@ -6,12 +6,12 @@
     <title>Isabelle Edel Museum</title>
     <style>
         @font-face {
-            font-family:Dax sa;
+            font-family: Dax sa;
             src: url('path-to-dax-font.woff2') format('woff2'); /* Lade die Dax-Schrift */
         }
 
         body {
-            font-family: Arial, sans-serif; /* Standard-Schriftart für alle Elemente */
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f9f9f9;
@@ -19,32 +19,32 @@
 
         header {
             background-color: white;
-            padding: 20px;
+            padding: 10px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
         header h1 {
-            font-family:Dax; 
-            font-size: 24px;
+            font-family: Dax;
+            font-size: 20px;
             margin: 0;
         }
 
         nav {
             display: flex;
-            gap: 20px;
+            gap: 10px;
         }
 
         nav a {
             text-decoration: none;
             color: black;
-            font-family: Arial, sans-serif; /* Serifenlose Schrift für Navigation */
             font-weight: bold;
         }
 
         .hero {
             display: flex;
+            flex-direction: row;
             align-items: center;
             justify-content: center;
             padding: 50px 20px;
@@ -53,8 +53,8 @@
         }
 
         .hero img {
-            max-width: 500px;
-            margin-left: 200px;
+            max-width: 100%;
+            height: auto;
         }
 
         .hero-content {
@@ -63,14 +63,13 @@
         }
 
         .hero-content h2 {
-            font-family: 'Dax'; /* Dax nur für die Hauptüberschrift */
-            font-size: 70px;
+            font-family: 'Dax';
+            font-size: 50px;
             margin-bottom: 10px;
         }
 
         .hero-content p {
-            font-family: Arial, sans-serif; /* Serifenlose Schriftart */
-            font-size: 18px;
+            font-size: 16px;
             margin-bottom: 20px;
         }
 
@@ -89,12 +88,10 @@
         }
 
         footer {
-            font-family: Arial, sans-serif; /* Serifenlose Schrift für Footer */
             background-color: white;
             color: black;
             text-align: center;
             padding: 10px;
-            margin-top: 20px;
             border-top: 1px solid #ccc;
         }
 
@@ -112,7 +109,6 @@
             justify-content: center;
             writing-mode: vertical-rl;
             text-orientation: mixed;
-            font-family: Arial, sans-serif; /* Serifenlose Schrift für Tickets */
             font-weight: bold;
             font-size: 16px;
             border-radius: 5px;
@@ -124,12 +120,12 @@
 
         .points {
             position: fixed;
-            left: 70px;
+            left: 10px;
             top: 50%;
             transform: translateY(-50%);
             display: flex;
             flex-direction: column;
-            gap: 10px; /* Abstand zwischen den Punkten */
+            gap: 10px;
         }
 
         .points div {
@@ -141,7 +137,61 @@
         }
 
         .points div:hover {
-            background-color: #43358c; /* Farbe ändern, wenn der Punkt angeklickt wird */
+            background-color: #43358c;
+        }
+
+        /* --- Responsive Anpassungen --- */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            nav {
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .hero-content {
+                margin: 0 0 20px 0;
+            }
+
+            .hero-content h2 {
+                font-size: 30px;
+            }
+
+            .hero img {
+                margin: 0;
+                max-width: 80%;
+            }
+
+            .ticket-bar {
+                display: none; /* Verstecke Ticket-Bar auf kleinen Geräten */
+            }
+
+            .points {
+                display: none; /* Verstecke Punkte auf kleinen Geräten */
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 18px;
+            }
+
+            .hero-content p {
+                font-size: 14px;
+            }
+
+            .hero-content button {
+                font-size: 14px;
+                padding: 8px 16px;
+            }
         }
     </style>
 </head>
@@ -158,7 +208,7 @@
     <div class="hero">
         <div class="hero-content">
             <h2>KOMMEN FRAUEN <br> NUR NACKT <br> INS MUSEUM</h2>
-            <p>Von Klassizismus bis Realismus bis in die Ggenwart. <br> Lassen Sie sich von Werken einzigartiger Künstlerinnen <br> begeistern und verzaubern.</p>
+            <p>Von Klassizismus bis Realismus bis in die Gegenwart. <br> Lassen Sie sich von Werken einzigartiger Künstlerinnen <br> begeistern und verzaubern.</p>
             <button>Mehr</button>
         </div>
         <img src="images/Bild_17.jpg" alt="Beispielkunstwerk">
