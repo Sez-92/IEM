@@ -13,7 +13,7 @@
 
 /* Bildstil */
 .slide img {
-    max-width: 500px; /* Begrenze die maximale Breite auf Desktop */
+    max-width: 300px; /* Begrenze die maximale Breite auf Desktop */
     height: auto; /* Behalte Seitenverhältnis */
     margin: 0 auto;
     display: block;
