@@ -1,28 +1,17 @@
 /* Slideshow Container */
 .slideshow-container {
     position: relative;
-    max-width: 50%;
-    margin-top: 200px;
+    max-width: 90%;
+    margin: 50px auto;
     text-align: center;
-   
-}
-
-/* Einzelne Slide */
-.slide {
-    display: none;
-}
-
-.slide.active {
-    display: block;
 }
 
 /* Bildstil */
 .slide img {
-    max-width: 500px;
-    height: auto;
+    max-width: 100%; /* Bild passt sich an die Container-Breite an */
+    height: auto; /* Beibehaltung des Seitenverhältnisses */
     margin: 0 auto;
     display: block;
-    border: 2px solid #ccc;
     border-radius: 10px;
 }
 
@@ -60,4 +49,41 @@
 
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
+}
+/* Für Tablets und kleinere Bildschirme */
+@media (max-width: 768px) {
+    .slideshow-container {
+        max-width: 100%; /* Container nimmt die volle Breite ein */
+        margin: 20px auto; /* Weniger Abstand */
+    }
+
+    .slide img {
+        max-width: 90%; /* Bildgröße auf 90% der Breite reduzieren */
+        border-radius: 5px;
+    }
+
+    .prev, .next {
+        font-size: 14px; /* Kleinere Buttons */
+        padding: 8px;
+    }
+}
+
+/* Für Smartphones */
+@media (max-width: 480px) {
+    .slideshow-container {
+        max-width: 100%; /* Container nimmt die volle Breite ein */
+    }
+
+    .slide img {
+        max-width: 100%; /* Bilder nehmen die volle Breite ein */
+    }
+
+    .slide p {
+        font-size: 14px; /* Kleinere Schriftgröße für Text */
+    }
+
+    .prev, .next {
+        font-size: 12px; /* Noch kleinere Buttons */
+        padding: 5px;
+    }
 }
