@@ -4,12 +4,17 @@
     max-width: 90%;
     margin: 50px auto;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert Inhalte horizontal */
+    justify-content: center; /* Zentriert Inhalte vertikal */
+    min-height: 100vh; /* Füllt den gesamten Bildschirm */
 }
 
 /* Bildstil */
 .slide img {
     max-width: 500px; /* Begrenze die maximale Breite auf Desktop */
-    height: auto; /* Seitenverhältnis bleibt erhalten */
+    height: auto; /* Behalte Seitenverhältnis */
     margin: 0 auto;
     display: block;
     border-radius: 10px;
@@ -20,71 +25,38 @@
     margin-top: 10px;
     font-size: 16px;
     color: #333;
+    text-align: center; /* Zentriert den Text */
 }
 
-/* Navigation Buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 10px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    transform: translateY(-50%);
-    user-select: none;
-    border-radius: 5px;
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
-
-.prev:hover, .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
-}
 /* Für Tablets und kleinere Bildschirme */
 @media (max-width: 768px) {
     .slide img {
         max-width: 300px; /* Reduziere die Breite für Tablets */
     }
-}
 
-    .slide img {
-        max-width: 90%; /* Bildgröße auf 90% der Breite reduzieren */
-        border-radius: 5px;
-    }
-
-    .prev, .next {
-        font-size: 14px; /* Kleinere Buttons */
-        padding: 8px;
+    .slide p {
+        font-size: 14px; /* Kleinere Schriftgröße für Tablets */
     }
 }
 
 /* Für Smartphones */
 @media (max-width: 480px) {
-    .slide img {
-        max-width: 90%; /* Bilder nehmen 90% der Bildschirmbreite ein */
-        height: auto; /* Behalte das Seitenverhältnis bei */
+    .slideshow-container {
+        min-height: auto; /* Entferne die Mindesthöhe */
+        padding: 20px; /* Optionaler Innenabstand */
     }
 
     .slide img {
-        max-width: 100%; /* Bilder nehmen die volle Breite ein */
+        max-width: 90%; /* Bilder nehmen 90% der Breite ein */
+        height: auto;
     }
 
     .slide p {
         font-size: 14px; /* Kleinere Schriftgröße für Text */
     }
 
+    /* Entferne die Pfeile */
     .prev, .next {
-        font-size: 12px; /* Noch kleinere Buttons */
-        padding: 5px;
+        display: none; /* Verstecke die Navigationspfeile */
     }
 }
