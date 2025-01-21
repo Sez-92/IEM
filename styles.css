@@ -10,9 +10,6 @@ body {
     background-color: #f9f9f9;
 }
 
-header + .slideshow-container {
-    margin-bottom: 200px; /* Abstand nach dem Header */
-}
 
 header {
     background-color: white;
