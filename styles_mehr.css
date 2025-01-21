@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Dax sa;
+    src: url('path-to-dax-font.woff2') format('woff2'); /* Lade die Dax-Schrift */
+}
+
 header {
     background-color: white;
     padding: 10px 20px;
