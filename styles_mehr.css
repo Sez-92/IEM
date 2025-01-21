@@ -1,67 +1,62 @@
-@font-face {
-    font-family: Dax sa;
-    src: url('path-to-dax-font.woff2') format('woff2'); /* Lade die Dax-Schrift */
-}
-
-
-
-
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    text-align: center;
-}
-
+/* Slideshow Container */
 .slideshow-container {
     position: relative;
     max-width: 90%;
+    margin: 50px auto;
+    text-align: center;
 }
 
+/* Einzelne Slide */
 .slide {
     display: none;
 }
 
-.active {
+.slide.active {
     display: block;
 }
 
-img {
-    max-width: 200px;
+/* Bildstil */
+.slide img {
+    max-width: 500px;
     height: auto;
-    margin-bottom: 20px;
+    margin: 0 auto;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 10px;
 }
 
-p {
-    font-size: 18px;
+/* Text unter dem Bild */
+.slide p {
+    margin-top: 10px;
+    font-size: 16px;
     color: #333;
 }
 
+/* Navigation Buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
-    margin-top: -22px;
     padding: 10px;
     color: white;
     font-weight: bold;
     font-size: 18px;
     border: none;
     background-color: rgba(0, 0, 0, 0.5);
+    transform: translateY(-50%);
     user-select: none;
+    border-radius: 5px;
 }
 
 .prev {
-    left: -40px;
+    left: 10px;
 }
 
 .next {
-    right: -40px;
+    right: 10px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
