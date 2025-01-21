@@ -23,8 +23,9 @@
 /* Text unter dem Bild */
 .slide p {
     margin-top: 10px;
-    font-size: 16px;
+    font-size: 20px;
     color: #333;
+    font-weight: bold;
     text-align: center; /* Zentriere den Text */
 }
 
@@ -35,7 +36,7 @@
     }
 
     .slide p {
-        font-size: 14px; /* Kleinere Schriftgröße für Tablets */
+        font-size: 18px; /* Kleinere Schriftgröße für Tablets */
     }
 }
 
