@@ -23,7 +23,7 @@
     <!-- Slideshow -->
     <div class="slideshow-container">
         <!-- Bild 1 -->
-        <div class="slide active">
+        <div class="slide">
             <img src="images/qrcode.jpg" alt="Kunstwerk 1">
             <p>QR-Codes können an diesen Punkten gescannt werden.</p>
         </div>
@@ -47,17 +47,20 @@
 
     <!-- JavaScript für die Slideshow -->
     <script>
-        let currentSlide = 0;
-        const slides = document.querySelectorAll('.slide');
+       let currentSlide = 0;
+const slides = document.querySelectorAll('.slide');
 
-        function changeSlide(direction) {
-            slides[currentSlide].classList.remove('active');
-            currentSlide = (currentSlide + direction + slides.length) % slides.length;
-            slides[currentSlide].classList.add('active');
-        }
+// Automatische Slideshow
+function showSlides() {
+    slides.forEach((slide, index) => {
+        slide.style.display = index === currentSlide ? 'block' : 'none';
+    });
+    currentSlide = (currentSlide + 1) % slides.length; // Zur nächsten Folie wechseln
+}
 
-        // Automatische Slideshow (optional)
-        setInterval(() => changeSlide(1), 5000);
+setInterval(showSlides, 5000); // Alle 5 Sekunden
+showSlides(); // Initiale Anzeige der ersten Folie
+
     </script>
 </body>
 </html>
