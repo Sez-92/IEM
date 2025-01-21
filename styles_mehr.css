@@ -3,6 +3,14 @@
     src: url('path-to-dax-font.woff2') format('woff2'); /* Lade die Dax-Schrift */
 }
 
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
 header {
     background-color: white;
     padding: 10px 20px;
